@@ -23,7 +23,7 @@ function AppUI(props ){
       <TodoList>
         {error && <TodoError error={error}/> }
         {loading && <TodoLoading/> }
-        {(!loading && !searchTodos) && <EmptyTodo /> }
+        {(!loading && searchTodos.length===0) && <EmptyTodo /> }
 
         {searchTodos.map(todo => (
           <TodoItem
